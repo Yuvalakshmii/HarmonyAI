@@ -1,0 +1,179 @@
+/* 🌈 --- BASE THEME (Light + Violet) --- */
+:root {
+    --violet: #7B61FF;
+    --violet-soft: #EDEBFF;
+    --bg: #FFFFFF;
+    --muted: #6b6b6b;
+  
+    /* Light theme defaults */
+    --bg-color: #f9fafb;
+    --text-color: #111;
+    --chat-ai-bg: #7b61ff;
+    --chat-ai-text: #fff;
+    --chat-user-bg: #fff;
+    --chat-user-text: #000;
+    --sidebar-bg: #f4f1ff;
+    --input-bg: #fff;
+  }
+  
+  /* 🌑 --- DARK THEME --- */
+  [data-theme="dark"] {
+    --bg-color: #000000; /* Full black */
+    --text-color: #f9f9f9; /* White text */
+    --chat-ai-bg: #7b61ff; /* Violet stays */
+    --chat-ai-text: #fff;
+    --chat-user-bg: #121212;
+    --chat-user-text: #fff;
+    --sidebar-bg: #0a0a0a;
+    --input-bg: #1c1c1c;
+  }
+  
+  /* 🌗 Smooth transitions for all elements */
+  * {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* 🧩 Universal Layout */
+  body, html, #root {
+    height: 100%;
+    margin: 0;
+    font-family: "Inter", system-ui, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  /* 🧭 Sidebar */
+  .sidebar {
+    background: var(--sidebar-bg);
+    color: var(--text-color);
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95vh;
+    padding: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  
+  .logo {
+    font-weight: 700;
+    color: var(--violet);
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* 💬 Chat Window */
+  .layout {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: var(--bg-color);
+  }
+  
+  .chat-window {
+    flex: 1;
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 20px 80px 20px;
+  }
+  
+  /* 💭 Chat Messages */
+  .chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .user-bubble {
+    align-self: flex-end;
+    background: var(--chat-user-bg);
+    color: var(--chat-user-text);
+    padding: 12px 16px;
+    border-radius: 16px 16px 0 16px;
+    max-width: 70%;
+  }
+  
+  .ai-bubble {
+    align-self: flex-start;
+    background: var(--chat-ai-bg);
+    color: var(--chat-ai-text);
+    padding: 12px 16px;
+    border-radius: 16px 16px 16px 0;
+    max-width: 70%;
+  }
+  
+  /* 🌗 Theme Toggle */
+  .theme-toggle {
+    position: fixed;
+    top: 15px;
+    left: 180px;
+    z-index: 50;
+  }
+  
+  .theme-toggle button {
+    background: var(--chat-ai-bg);
+    color: var(--chat-ai-text);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  /* 🎤 Input Bar (center-bottom like ChatGPT) */
+  .controls {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: var(--input-bg);
+    display: flex;
+    gap: 10px;
+    padding: 10px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 16px 16px 0 0;
+  }
+  
+  /* ✨ Buttons */
+  .btn {
+    background: var(--violet);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .btn.ghost {
+    background: transparent;
+    color: var(--violet);
+    border: 1px solid var(--violet);
+  }
+  
+  .modal-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  .modal-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease;
+  }
+  .modal-exit {
+    opacity: 1;
+  }
+  .modal-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+  }
+  
