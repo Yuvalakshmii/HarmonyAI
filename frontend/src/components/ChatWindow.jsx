@@ -1,8 +1,7 @@
-// frontend/src/components/ChatWindow.jsx
 import React, { useEffect, useRef, useState } from "react";
 import { sendChat } from "../utils/api";
 
-export default function ChatWindow({ email, selectedSession }) {
+export default function ChatWindow({ email, selectedSession, isBlending = false }) {
   const [messages, setMessages] = useState([]);
   const [text, setText] = useState("");
   const chatRef = useRef();
@@ -76,6 +75,7 @@ export default function ChatWindow({ email, selectedSession }) {
         height: "90vh",
         background: "var(--bg-color)",
         color: "var(--text-color)",
+        position: "relative",
       }}
     >
       {/* 💬 Chat messages */}
@@ -194,6 +194,43 @@ export default function ChatWindow({ email, selectedSession }) {
           🎙️
         </button>
       </div>
+
+      {/* 🌸 Loading Overlay for Blend */}
+      {isBlending && (
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "rgba(0,0,0,0.6)",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "#fff",
+            fontSize: "1.2rem",
+            textAlign: "center",
+            backdropFilter: "blur(6px)",
+            zIndex: 999,
+          }}
+        >
+          <div
+            style={{
+              width: "45px",
+              height: "45px",
+              border: "4px solid rgba(255,255,255,0.3)",
+              borderTop: "4px solid #a073ff",
+              borderRadius: "50%",
+              marginBottom: "20px",
+              animation: "spin 1s linear infinite",
+            }}
+          ></div>
+          💫 <br />
+          <strong>Analyzing emotional connection...</strong>
+          <p style={{ fontSize: "0.9rem", marginTop: "8px" }}>
+            Please wait while Harmony AI reads both hearts 💞
+          </p>
+        </div>
+      )}
     </div>
   );
 }

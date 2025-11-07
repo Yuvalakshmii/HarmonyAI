@@ -4,7 +4,8 @@ firebase-admin
 google-cloud-firestore
 scikit-learn
 numpy
-tensorflow==2.11.0
+tensorflow-macos==2.15.0
+tensorflow-metal==1.1.0
 pandas
 requests
 python-dotenv

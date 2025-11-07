@@ -1,0 +1,42 @@
+# 🔹 Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+*.db
+
+# 🔹 Environment & secrets
+.env
+firebase.js (if it has API keys — optional, use env vars instead)
+
+# 🔹 Model / Data files
+*.tflite
+*.onnx
+*.h5
+*.pkl
+*.pt
+*.dylib
+*.so
+*.bin
+*.zip
+*.tar
+*.gz
+
+# Virtual environment
+venv/
+env/
+backend/venv/
+
+# Node modules
+node_modules/
+frontend/node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# OS files
+.DS_Store

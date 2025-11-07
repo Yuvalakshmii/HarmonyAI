@@ -20,23 +20,21 @@ export default function App() {
   };
 
   if (!user) return <LoginForm onLogin={setUser} />;
-
-  // 🧠 When user clicks “Blend”
+  
   const handleBlend = async (partnerEmail) => {
     try {
       setIsBlending(true);
       setBlendResult(null);
-
       const result = await blendAccounts(user.email, partnerEmail);
-
       setBlendResult(result);
     } catch (error) {
-      console.error("Blend error:", error);
-      setBlendResult({ advice: "Server error. Please try again." });
+      console.error("Blend failed:", error);
+      setBlendResult({ advice: "(blend failed — please retry later)" });
     } finally {
       setIsBlending(false);
     }
   };
+  
 
   return (
     <div className={`app-root ${theme}`}>
@@ -58,7 +56,7 @@ export default function App() {
         />
 
         <div className="flex-1" style={{ flex: 1, padding: "20px" }}>
-          <ChatWindow email={user.email} selectedSession={selectedSession} />
+          <ChatWindow email={user.email} selectedSession={selectedSession} isBlending={isBlending} />
 
           {/* 💞 Blend results */}
           {isBlending && (
