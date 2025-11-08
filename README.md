@@ -1,21 +1,15 @@
-🌸 Harmony AI — Emotional Mediator for Healthy Relationships
+## 🌸 Harmony AI — Emotional Mediator for Healthy Relationships
 
 A full-stack AI system for emotion understanding, partner insights, and supportive guidance.
 
-📌 Overview
+## 📌 Overview
 
-Harmony AI is a modern emotional-intelligence web application designed to help individuals and couples understand their emotional states and improve communication through AI-guided insights.
+- Harmony AI is a modern emotional-intelligence web application designed to help individuals and couples understand their emotional states and improve communication through AI-guided insights.
 
-It detects emotions using a Bi-LSTM + TF-IDF classifier, generates empathetic recommendations using an LLM (Ollama), and stores complete conversation history securely in Firebase Firestore.
+- It detects emotions using a Bi-LSTM + TF-IDF classifier, generates empathetic recommendations using an LLM (Ollama), and stores complete conversation history securely in Firebase Firestore.
 
-A unique ✨ Blend Mode provides mutual emotional insights by connecting two partner accounts.
+- A unique ✨ Blend Mode provides mutual emotional insights by connecting two partner accounts.
 
-This project integrates:
-✅ Machine Learning
-✅ Natural Language Processing
-✅ Full-Stack Web Development
-✅ LLM-powered recommendation system
-✅ Firebase-based data persistence
 
 # 📸 RESULTS
 
@@ -50,7 +44,14 @@ This project integrates:
 <img width="600" alt="Dark Mode" src="https://github.com/user-attachments/assets/eaead839-cb6e-4ca2-b6d4-9cab0ddcc0d7" />
 
 ---
+# This project integrates:
+- Machine Learning
+- Natural Language Processing
+- Full-Stack Web Development
+- LLM-powered recommendation system
+- Firebase-based data persistence
 
+---
 # ✨ Features
 
 ### 🔥 Emotion Detection
@@ -153,7 +154,7 @@ This project integrates:
   - `README.md`
   - `.gitignore`
 
-
+---
 ## 🚀 Setup Instructions
 
 - 1. Clone the Repo
@@ -184,7 +185,7 @@ cd frontend
 npm install
 npm run dev
 
-
+---
 Frontend runs on:
 👉 http://localhost:5173
 
@@ -193,6 +194,7 @@ Backend runs on:
 
 Ollama runs on:
 👉 http://localhost:11434
+---
 
 ## 📊 Dataset Used
 
@@ -216,20 +218,7 @@ Ollama runs on:
 
 - TF-IDF vectorization
 
-## 🧪 Results
-
-- Real-time emotion detection
-- Accurate Bi-LSTM predictions
-- Clean chat UI & history support
-- Working Blend Mode
-- Fully functional three-port setup:
-
-5173 → Frontend
-
-8000 → Backend
-
-11434 → Ollama
-
+---
 
 ## Conclusion
 
@@ -237,21 +226,22 @@ Ollama runs on:
 
 ## 🔮 Future Work
 
-Secure partner-blend invitation system
+- Secure partner-blend invitation system
 
-Add multilingual emotion analysis
+- Add multilingual emotion analysis
 
-Add voice-based emotion recognition
+- Add voice-based emotion recognition
 
-Improve personalization (fine-tuned LLM)
+- Improve personalization (fine-tuned LLM)
 
-Couple progress dashboard
+- Couple progress dashboard
 
-Mobile app version
-
+- Mobile app version
+---
 ## 💖 Author
 
-Yuvalakshmi M
-yuvalakshmi.m2022@vitstudent.ac.in
-M.Tech CSE
-VIT Chennai
+- Yuvalakshmi M
+- yuvalakshmi.m2022@vitstudent.ac.in
+- M.Tech CSE
+- VIT Chennai
+---
