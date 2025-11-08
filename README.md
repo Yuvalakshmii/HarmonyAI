@@ -94,34 +94,31 @@ Backend (FastAPI + Uvicorn)
         |--> Firestore (User collections -> sessions)
 
 
-🔧 Tech Stack
-🖥️ Frontend
 
-React (Vite)
+---
 
-Firebase Authentication
+# 🔧 Tech Stack
 
-Firestore
+## 🖥️ Frontend
+- React (Vite)
+- Firebase Authentication
+- Firestore
+- CSS + custom themes (Dark / Light modes)
 
-CSS + custom themes
+## ⚙️ Backend
+- FastAPI
+- Uvicorn
+- Pydantic
 
-⚙️ Backend
+## 🤖 ML / AI
+- TF-IDF vectorizer
+- Bi-LSTM emotion classifier
+- Ollama LLM for empathetic recommendation generation
 
-FastAPI
+---
 
-Uvicorn
+# 📂 Project Structure
 
-Pydantic
-
-🤖 ML / AI
-
-TF-IDF vectorizer
-
-Bi-LSTM classifier
-
-Ollama LLM for empathetic response generation
-
-📂 Project Structure
 HarmonyAI/
 │── backend/
 │   ├── main.py
@@ -129,18 +126,23 @@ HarmonyAI/
 │   │   ├── emotion_predict.py
 │   │   ├── firestore_utils.py
 │   │   ├── ollama_api.py
-│   
+│   ├── requirements.txt
+│   └── .keys/
+│       └── firebase_key.json    # (not committed to GitHub)
 │
 │── frontend/
 │   ├── src/
 │   │   ├── components/
 │   │   ├── utils/
 │   │   └── App.jsx
-│   
+│   ├── index.html
+│   ├── main.jsx
+│   └── package.json
 │
 │── screenshots/
 │── README.md
 │── .gitignore
+
 
 🚀 Setup Instructions
 ✅ 1. Clone the Repo
