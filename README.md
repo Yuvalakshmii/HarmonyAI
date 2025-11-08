@@ -17,78 +17,82 @@ This project integrates:
 ✅ LLM-powered recommendation system
 ✅ Firebase-based data persistence
 
-📸 RESULTS
+# 📸 RESULTS
 
-✅ Home Screen
-<img width="385" height="204" alt="image" src="https://github.com/user-attachments/assets/2817d87c-83f5-4126-b412-fd43b6015b17" />
+---
 
-✅ Chat Window
+## ✅ Home Screen
+<img width="600" alt="Home Screen" src="https://github.com/user-attachments/assets/2817d87c-83f5-4126-b412-fd43b6015b17" />
 
-RECENT SESSION
-<img width="401" height="217" alt="image" src="https://github.com/user-attachments/assets/3b027207-ade8-4b05-b0c9-bd2212c57c17" />
-NEW SESSION
-<img width="432" height="247" alt="image" src="https://github.com/user-attachments/assets/f235ef25-e7d5-489a-9736-11908c3e869f" />
+---
 
-✅ Blend Insights
-<img width="432" height="236" alt="image" src="https://github.com/user-attachments/assets/fb5d3416-64a7-4f66-867c-7b7efdd285f0" />
-<img width="432" height="215" alt="image" src="https://github.com/user-attachments/assets/f5c0a6d5-06ca-4d67-959d-79deb8d61a94" />
-<img width="432" height="259" alt="image" src="https://github.com/user-attachments/assets/bd3f01bc-863a-40d1-bff5-7f71b219095d" />
+## ✅ Chat Window
 
-✅ Dark Mode
-<img width="432" height="235" alt="image" src="https://github.com/user-attachments/assets/eaead839-cb6e-4ca2-b6d4-9cab0ddcc0d7" />
+### 🔹 Recent Session
+<img width="600" alt="Recent Session" src="https://github.com/user-attachments/assets/3b027207-ade8-4b05-b0c9-bd2212c57c17" />
 
+### 🔹 New Session
+<img width="600" alt="New Session" src="https://github.com/user-attachments/assets/f235ef25-e7d5-489a-9736-11908c3e869f" />
 
-✨ Features
-🔥 Emotion Detection
+---
 
-Uses Bi-LSTM + TF-IDF to classify emotional tone
+## ✅ Blend Insights
 
-Detects: joy, sadness, anger, guilt, shame, disgust, fear
+<img width="600" alt="Blend Insight 1" src="https://github.com/user-attachments/assets/fb5d3416-64a7-4f66-867c-7b7efdd285f0" />
+<br><br>
+<img width="600" alt="Blend Insight 2" src="https://github.com/user-attachments/assets/f5c0a6d5-06ca-4d67-959d-79deb8d61a94" />
+<br><br>
+<img width="600" alt="Blend Insight 3" src="https://github.com/user-attachments/assets/bd3f01bc-863a-40d1-bff5-7f71b219095d" />
 
-💬 Real-time Chat
+---
 
-AI-generated empathetic advice
+## ✅ Dark Mode
+<img width="600" alt="Dark Mode" src="https://github.com/user-attachments/assets/eaead839-cb6e-4ca2-b6d4-9cab0ddcc0d7" />
 
-Clean UI with light/dark modes
+---
 
-Voice input supported
+# ✨ Features
 
-📚 Session History
+### 🔥 Emotion Detection
+- Uses **Bi-LSTM + TF-IDF** to classify emotional tone.
+- Detects: **joy, sadness, anger, guilt, shame, disgust, fear**.
 
-Saved per user in Firestore
+### 💬 Real-time Chat
+- AI-generated empathetic advice.
+- Clean UI with light / dark themes.
+- Voice input support (Web Speech API).
 
-Click to revisit past emotional conversations
+### 📚 Session History
+- Each session is stored per user in **Firestore**.
+- Click any previous session to revisit the conversation and AI advice.
 
-🆕 New Session
+### 🆕 New Session
+- Start a completely fresh conversation any time (clears current chat view).
 
-Start a completely fresh conversation any time
+### 💞 Blend Mode (Novel Feature)
+- Connect two partners via email (with invite/consent).
+- Pulls emotional histories for both accounts from Firestore.
+- Generates combined relationship insights and compatibility markers.
 
-💞 Blend Mode (Novel Feature)
+### 🔒 Firestore Storage
+- Secure session storage using Firestore.
+- Scalable NoSQL structure for per-user collections.
+- Simple retrieval and aggregation for Blend operations.
 
-Connect two partners via email
+---
 
-Pulls emotional histories of both
+# 🧠 Architecture
 
-Generates relationship insights + compatibility markers
-
-🔒 Firestore Storage
-
-Secure session storage
-
-Scalable NoSQL structure
-
-Easy retrieval per user
-
-🧠 Architecture
 Frontend (React + Vite)
         |
         |  (REST API calls)
         v
-Backend (FastAPI)
+Backend (FastAPI + Uvicorn)
         |
-        |--> Emotion Model (BiLSTM + TF-IDF)
-        |--> LLM Generator (Ollama)
-        |--> Firestore (Session Storage)
+        |--> Emotion Model (TF-IDF vectorizer -> Bi-LSTM classifier)
+        |--> LLM Generator (Ollama local server or small LLM endpoint)
+        |--> Firestore (User collections -> sessions)
+
 
 🔧 Tech Stack
 🖥️ Frontend
