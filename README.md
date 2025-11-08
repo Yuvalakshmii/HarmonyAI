@@ -157,15 +157,15 @@ A full-stack AI system for emotion understanding, partner insights, and supporti
 ---
 ## 🚀 Setup Instructions
 
-- 1. Clone the Repo
-git clone https://github.com/Yuvalakshmii/HarmonyAI.git
-cd HarmonyAI
+#1. Clone the Repo
+-git clone https://github.com/Yuvalakshmii/HarmonyAI.git
+-cd HarmonyAI
 
-- 2. Setup Backend (FastAPI)
-Create virtual env:
-cd backend
-python3 -m venv venv
-source venv/bin/activate
+#2. Setup Backend (FastAPI)
+-Create virtual env:
+-cd backend
+-python3 -m venv venv
+-source venv/bin/activate
 
 ## Install packages:
 
@@ -178,12 +178,13 @@ Place your key here:
 - backend/.keys/firebase_key.json
 
 ## Run backend:
-python3 -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+- python3 -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 - 3. Setup Frontend (React)
-cd frontend
-npm install
-npm run dev
+
+-cd frontend
+-npm install
+-npm run dev
 
 ---
 Frontend runs on:
@@ -194,6 +195,7 @@ Backend runs on:
 
 Ollama runs on:
 👉 http://localhost:11434
+
 ---
 
 ## 📊 Dataset Used
