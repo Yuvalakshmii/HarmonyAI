@@ -80,20 +80,31 @@ This project integrates:
 - Simple retrieval and aggregation for Blend operations.
 
 ---
+# 🧠 Architecture:
 
-# 🧠 Architecture
+  Frontend:
+    - React (Vite)
+    - Sends REST API requests to backend
 
-Frontend (React + Vite)
-        |
-        |  (REST API calls)
-        v
-Backend (FastAPI + Uvicorn)
-        |
-        |--> Emotion Model (TF-IDF vectorizer -> Bi-LSTM classifier)
-        |--> LLM Generator (Ollama local server or small LLM endpoint)
-        |--> Firestore (User collections -> sessions)
+  Backend (FastAPI + Uvicorn):
+    Components:
+      - Emotion Model:
+          description: "TF-IDF vectorizer → Bi-LSTM classifier"
+      - LLM Generator:
+          description: "Ollama local server for empathetic responses"
+      - Firestore:
+          description: "Stores user sessions, chat histories, blend data"
 
+  Data Flow:
+    Frontend → Backend → Emotion Model
+    Frontend → Backend → LLM (Ollama)
+    Backend ↔ Firestore (read/write sessions)
 
+  Purpose:
+    - Detect emotions from text
+    - Generate supportive recommendations
+    - Store and retrieve user conversation history
+    - Provide Blend mode across two partner accounts
 
 ---
 
