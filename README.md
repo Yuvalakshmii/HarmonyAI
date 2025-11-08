@@ -157,11 +157,11 @@ A full-stack AI system for emotion understanding, partner insights, and supporti
 ---
 ## 🚀 Setup Instructions
 
-#1. Clone the Repo
+1. Clone the Repo
 - git clone https://github.com/Yuvalakshmii/HarmonyAI.git
 - cd HarmonyAI
 
-#2. Setup Backend (FastAPI)
+2. Setup Backend (FastAPI)
 - Create virtual env:
 - cd backend
 - python3 -m venv venv
