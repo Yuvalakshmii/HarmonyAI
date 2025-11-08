@@ -130,55 +130,56 @@ This project integrates:
 
 # 📂 Project Structure
 
-HarmonyAI/
-│── backend/
-│   ├── main.py
-│   ├── utils/
-│   │   ├── emotion_predict.py
-│   │   ├── firestore_utils.py
-│   │   ├── ollama_api.py
-│   ├── requirements.txt
-│   └── .keys/
-│       └── firebase_key.json    # (not committed to GitHub)
-│
-│── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── utils/
-│   │   └── App.jsx
-│   ├── index.html
-│   ├── main.jsx
-│   └── package.json
-│
-│── screenshots/
-│── README.md
-│── .gitignore
+## 🗂️ Repository Layout
+- **HarmonyAI/**
+  - **backend/**
+    - `main.py`
+    - **utils/**
+      - `emotion_predict.py`
+      - `firestore_utils.py`
+      - `ollama_api.py`
+    - `requirements.txt`
+    - **.keys/**
+      - `firebase_key.json`  # (ignored from Git)
+  - **frontend/**
+    - **src/**
+      - **components/**
+      - **utils/**
+      - `App.jsx`
+    - `index.html`
+    - `main.jsx`
+    - `package.json`
+  - **screenshots/**
+  - `README.md`
+  - `.gitignore`
 
 
-🚀 Setup Instructions
-✅ 1. Clone the Repo
+## 🚀 Setup Instructions
+
+- 1. Clone the Repo
 git clone https://github.com/Yuvalakshmii/HarmonyAI.git
 cd HarmonyAI
 
-✅ 2. Setup Backend (FastAPI)
+- 2. Setup Backend (FastAPI)
 Create virtual env:
 cd backend
 python3 -m venv venv
 source venv/bin/activate
 
-Install packages:
-pip install -r requirements.txt
+## Install packages:
 
-Add Firebase key:
+- pip install -r requirements.txt
+
+- Add Firebase key:
 
 Place your key here:
 
-backend/.keys/firebase_key.json
+- backend/.keys/firebase_key.json
 
-Run backend:
+## Run backend:
 python3 -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
-✅ 3. Setup Frontend (React)
+- 3. Setup Frontend (React)
 cd frontend
 npm install
 npm run dev
@@ -193,34 +194,35 @@ Backend runs on:
 Ollama runs on:
 👉 http://localhost:11434
 
-📊 Dataset Used
-✅ ISEAR Dataset (International Survey on Emotion Antecedents and Reactions)
+## 📊 Dataset Used
 
-7,520 samples
+- ISEAR Dataset (International Survey on Emotion Antecedents and Reactions)
 
-Emotion labels: joy, anger, sadness, fear, disgust, guilt, shame
+- 7,520 samples
 
-Used for training Bi-LSTM classifier
+- Emotion labels: joy, anger, sadness, fear, disgust, guilt, shame
 
-Preprocessing includes:
+- Used for training Bi-LSTM classifier
 
-Lowercasing
+# Preprocessing includes:
 
-Tokenization
+- Lowercasing
 
-Stopword removal
+- Tokenization
 
-Stemming
+- Stopword removal
 
-TF-IDF vectorization
+- Stemming
 
-🧪 Results
+- TF-IDF vectorization
 
-✅ Real-time emotion detection
-✅ Accurate Bi-LSTM predictions
-✅ Clean chat UI & history support
-✅ Working Blend Mode
-✅ Fully functional three-port setup:
+## 🧪 Results
+
+- Real-time emotion detection
+- Accurate Bi-LSTM predictions
+- Clean chat UI & history support
+- Working Blend Mode
+- Fully functional three-port setup:
 
 5173 → Frontend
 
@@ -229,11 +231,11 @@ TF-IDF vectorization
 11434 → Ollama
 
 
-Conclusion
+## Conclusion
 
-Harmony AI demonstrates how machine learning, NLP, and modern web development can work together to provide an emotionally intelligent companion for individuals and couples. The system successfully detects emotions, stores conversations, and provides AI-driven reflective insights.
+- Harmony AI demonstrates how machine learning, NLP, and modern web development can work together to provide an emotionally intelligent companion for individuals and couples. The system successfully detects emotions, stores conversations, and provides AI-driven reflective insights.
 
-🔮 Future Work
+## 🔮 Future Work
 
 Secure partner-blend invitation system
 
@@ -247,7 +249,7 @@ Couple progress dashboard
 
 Mobile app version
 
-💖 Author
+## 💖 Author
 
 Yuvalakshmi M
 yuvalakshmi.m2022@vitstudent.ac.in
