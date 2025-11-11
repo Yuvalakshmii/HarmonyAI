@@ -1,4 +1,4 @@
-## 🌸 Harmony AI — Emotional Mediator for Healthy Relationships
+## 🌸 Harmony AI - Emotional Mediator for Healthy Relationships
 
 A full-stack AI system for emotion understanding, partner insights, and supportive guidance.
 
@@ -162,7 +162,7 @@ A full-stack AI system for emotion understanding, partner insights, and supporti
 - cd HarmonyAI
 
 2. Setup Backend (FastAPI)
-- Create virtual env:
+Create virtual env:
 - cd backend
 - python3 -m venv venv
 - source venv/bin/activate
